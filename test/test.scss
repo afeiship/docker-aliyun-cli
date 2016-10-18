@@ -1,0 +1,51 @@
+@import "../dist/webkit-sassui-linear-bg.scss";
+.container{
+  width:710px;
+  height: 139px;
+  margin:20px auto;
+}
+.box{
+  width:230px;
+  height:139px;
+  font-size: 14px;
+  position: relative;
+  float: left;
+  &+.box{
+    margin-left: 10px;
+  }
+}
+.h20{
+  height:24px;
+  line-height: 24px;
+}
+
+.h40{
+  height:40px;
+  line-height: 40px;
+}
+
+
+.h80{
+  height:80px;
+  line-height: 80px;
+}
+
+[class*=test-webkit-sassui-linear]{
+  position: absolute;
+  width:100%;
+  bottom:0;
+  color:#fff;
+  padding:0 10px;
+  box-sizing: border-box;
+}
+.test-webkit-sassui-linear-bg1{
+  @include webkit-sassui-linear-bg();
+}
+
+.test-webkit-sassui-linear-bg2{
+  @include webkit-sassui-linear-bg(rgba(#f60,0.4));
+}
+
+.test-webkit-sassui-linear-bg3{
+  @include webkit-sassui-linear-bg(rgba(#f00,0.8));
+}
