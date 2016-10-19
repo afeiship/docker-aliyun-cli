@@ -1,6 +1,6 @@
 /*webkit-sassui-linear-bg Start*/
-@mixin webkit-sassui-linear-bg($inRgba:rgba(#000,.8)) {
+@mixin webkit-sassui-linear-bg($inRgba:rgba(#000,.8),$inDeg:180deg) {
   //Your mixin code goes here.
-  background: linear-gradient(transparent,$inRgba);
+  background: linear-gradient($inDeg,transparent 0,$inRgba);
 }
 /*webkit-sassui-linear-bg End*/
