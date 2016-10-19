@@ -1,4 +1,5 @@
 /*webkit-sassui-linear-bg Start*/
+// http://h5.m.taobao.com/trip/dest/city/index.html?destId=1010&destId=1010&title_bar_color=ffffff&title_bar_color=ffffff&bridge_title_bar_font_color=333333&bridge_title_bar_font_color=333333&bridge_title_bar_font_size=16&bridge_title_bar_font_size=16&__titileFix=YES&__titileFix=YES&spm=181.7992089.1999086672.0&spm=181.7992089.1999086672.0&ttid=&ttid=&_projVer=0.1.23
 @mixin webkit-sassui-linear-bg($inRgba:rgba(#000,.8),$inDeg:180deg) {
   //Your mixin code goes here.
   background: linear-gradient($inDeg,transparent 0,$inRgba);
