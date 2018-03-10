@@ -1,29 +1,36 @@
 /*webkit-sassui-linear-bg Start*/
 .webkit-sassui-linear-bg[data-color=black][data-deg='0'] {
-  background: linear-gradient(0, transparent 0, rgba(0, 0, 0, 0.8));
+  background: linear-gradient(0deg, transparent 0, rgba(0, 0, 0, 0.8));
 }
 
 .webkit-sassui-linear-bg[data-color=black][data-deg='180'] {
-  background: linear-gradient(180, transparent 0, rgba(0, 0, 0, 0.8));
+  background: linear-gradient(180deg, transparent 0, rgba(0, 0, 0, 0.8));
 }
 
 .webkit-sassui-linear-bg[data-color=white][data-deg='0'] {
-  background: linear-gradient(0, transparent 0, rgba(255, 255, 255, 0.8));
+  background: linear-gradient(0deg, transparent 0, rgba(255, 255, 255, 0.8));
 }
 
 .webkit-sassui-linear-bg[data-color=white][data-deg='180'] {
-  background: linear-gradient(180, transparent 0, rgba(255, 255, 255, 0.8));
+  background: linear-gradient(180deg, transparent 0, rgba(255, 255, 255, 0.8));
 }
 
 /*webkit-sassui-linear-bg End*/
+.wrapper {
+  width: 320px;
+  margin: 20px auto;
+  border: 1px solid salmon;
+}
+
 .box {
-  margin-bottom: 20px;
   position: relative;
+  margin: 0 auto 20px;
 }
 
 .box img {
   display: block;
   width: 100%;
+  height: 120px;
 }
 
 .box .footer {
@@ -33,8 +40,13 @@
 
 .box .webkit-sassui-linear-bg {
   position: absolute;
-  width: 100%;
   bottom: 0;
+  left: 0;
+  right: 0;
   color: #fff;
   padding-left: 10px;
+}
+
+.box .webkit-sassui-linear-bg[data-color=white] {
+  color: #000;
 }

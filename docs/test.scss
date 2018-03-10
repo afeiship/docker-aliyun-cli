@@ -1,11 +1,16 @@
 @import "../dist/webkit-sassui-linear-bg.scss";
-
+.wrapper{
+  width: 320px;
+  margin: 20px auto;
+  border: 1px solid salmon;
+}
 .box{
-  margin-bottom: 20px;
   position: relative;
+  margin:0 auto 20px;
   img{
     display: block;
     width: 100%;
+    height: 120px;
   }
 
   .footer {
@@ -15,9 +20,14 @@
 
   .webkit-sassui-linear-bg{
     position: absolute;
-    width: 100%;
     bottom:0;
+    left:0;
+    right:0;
     color: #fff;
     padding-left: 10px;
+
+    &[data-color=white]{
+      color: #000;
+    }
   }
 }
