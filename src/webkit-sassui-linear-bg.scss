@@ -8,18 +8,18 @@
 
 .webkit-sassui-linear-bg {
     &[data-color=black] {
-        &[data-deg=0] {
+        &[data-deg='0'] {
           @include webkit-sassui-linear-bg(rgba(#000, .8), 0);
         }
-        &[data-deg=180] {
+        &[data-deg='180'] {
           @include webkit-sassui-linear-bg(rgba(#000, .8), 180);
         }
     }
     &[data-color=white] {
-        &[data-deg=0] {
+        &[data-deg='0'] {
           @include webkit-sassui-linear-bg(rgba(#fff, .8), 0);
         }
-        &[data-deg=180] {
+        &[data-deg='180'] {
           @include webkit-sassui-linear-bg(rgba(#fff, .8), 180);
         }
     }
