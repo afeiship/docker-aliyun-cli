@@ -4,6 +4,7 @@
   "description": "Docker for aliyun cli.",
   "scripts": {
     "build": "docker build . -t afeiship/docker-aliyun-cli:latest",
+    "debug": "docker run -it --rm afeiship/docker-aliyun-cli:latest",
     "push": "docker push afeiship/docker-aliyun-cli:latest",
     "run": "docker run -it afeiship/docker-aliyun-cli:latest"
   },
@@ -11,9 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/afeiship/docker-aliyun-cli.git"
   },
-  "keywords": [],
   "author": "afeiship",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/afeiship/docker-aliyun-cli/issues"
   },

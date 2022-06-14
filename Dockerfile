@@ -1,10 +1,12 @@
-FROM alpine:3.8 as dl
-ENV ALIYUNCLI_VERSION 3.0.16
-WORKDIR /tmp
-RUN apk add --no-cache curl \
-    && curl -L -o aliyun-cli-linux-amd64.tgz https://github.com/aliyun/aliyun-cli/releases/download/v${ALIYUNCLI_VERSION}/aliyun-cli-linux-${ALIYUNCLI_VERSION}-amd64.tgz \
-    && tar zxvf aliyun-cli-linux-amd64.tgz
-
 FROM alpine:3.8
-COPY --from=dl /tmp/aliyun /usr/local/bin/aliyun
-ENTRYPOINT [ "/usr/local/bin/aliyun" ]
+RUN apk add --no-cache libc6-compat
+ARG ALIYUN_CLI_VERSION=3.0.102
+
+# https://aliyuncli.alicdn.com/aliyun-cli-linux-3.0.102-amd64.tgz
+RUN wget -qO- "https://aliyuncli.alicdn.com/aliyun-cli-linux-${ALIYUN_CLI_VERSION}-amd64.tgz" |\
+    tar zxf - -C /usr/local/bin/ && \
+    aliyun version
+
+# check aliyun version
+CMD ["aliyun"]
+# ENTRYPOINT [ "/usr/local/bin/aliyun" ]
